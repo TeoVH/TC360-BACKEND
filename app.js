@@ -4,20 +4,25 @@ const express = require('express');
 const bodyParser = require('body-parser');
 require('dotenv').config();
 require('./services/db.js');
+
+const cors = require('cors');
+
 const app = express();
+app.use(cors());
+
 app.use(bodyParser.json());
 
 /* ROUTERS */
 const routerHome = require('./routes/home.js');
-app.use('/', routerHome)
+app.use('/', routerHome);
 
 const routerAuth = require('./routes/auth.js');
 app.use('/auth', routerAuth);
 
 /* SERVER */
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 
 app.listen(PORT, () => {
-    console.log(`Server listening on port ${PORT}...`);
+  console.log(`Server listening on port ${PORT}...`);
 });

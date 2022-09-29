@@ -1,22 +1,19 @@
 // * Models //
-const User = require("../models/User");
+const User = require('../models/User');
 
 const registerUser = async (req, res) => {
-  let user = await User.findOne({email: req.body.email});
+  let user = await User.findOne({ email: req.body.email });
   if (user) {
-    console.log('User already exit');
-    return res.json({error: "User already exist"});
+    return res.status(400).send({ error: 'User already exist' });
   }
 
-  user = await User.findOne({nickname: req.body.nickname});
+  user = await User.findOne({ nickname: req.body.nickname });
   if (user) {
-    console.log('User already exit');
-    return res.json({error: "User already exist"});
+    return res.status(400).send({ error: 'User already exist' });
   }
 
-  if (await req.body.email !== req.body.verEmail) {
-    console.log("Emails don't match");
-    return res.json({error: "Emails don't match"});
+  if ((await req.body.email) !== req.body.verEmail) {
+    return res.status(400).send({ error: "Emails don't match" });
   }
 
   try {
@@ -25,29 +22,25 @@ const registerUser = async (req, res) => {
     let newUser = await new User({
       nickname: userInfo.nickname,
       email: userInfo.email,
-      verEmail: userInfo.email,
     });
 
     newUser.save((err) => {
-      if (err)
-        console.log(err);
-
-      else
-        console.log('User created');
-        return res.send(JSON.stringify('User created'));
+      if (err) console.log(err);
+      else console.log('User created');
+      return res.send(JSON.stringify('User created'));
     });
   } catch (error) {
     res.json({ error: error.message });
   }
 };
 
-const loginUser = async(req, res) => {
+const loginUser = async (req, res) => {
   const { email } = req.body;
   try {
-    const user = await User.findOne({email})
+    const user = await User.findOne({ email });
     if (!user) {
       console.log("User doesn't exit");
-      return res.send({error: "User doesn't exit"});
+      return res.send({ error: "User doesn't exit" });
     }
 
     // if (!await user.compareEmail(email)) {
@@ -62,6 +55,6 @@ const loginUser = async(req, res) => {
 };
 
 module.exports = {
-    registerUser,
-    loginUser
-}
+  registerUser,
+  loginUser,
+};
