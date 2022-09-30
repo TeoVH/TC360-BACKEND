@@ -11,7 +11,7 @@ routerMembers.use(express.json());
 
 /* Routes */
 
-routerMembers.get('/members', memberList);
+routerMembers.get('/', memberList);
 
 
 /* Export */
