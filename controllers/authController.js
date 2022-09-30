@@ -19,8 +19,6 @@ const registerUser = async (req, res) => {
   try {
     let userInfo = req.body;
 
-    console.log('user!!!', userInfo);
-
     let newUser = await new User({
       nickname: userInfo.nickname,
       email: userInfo.email,
