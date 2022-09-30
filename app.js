@@ -19,6 +19,9 @@ app.use('/', routerHome);
 const routerAuth = require('./routes/auth.js');
 app.use('/auth', routerAuth);
 
+const routerMembers = require('./routes/members.js');
+app.use('/members', routerMembers);
+
 /* SERVER */
 
 const PORT = process.env.PORT || 8080;
