@@ -1,6 +1,7 @@
 /* MODULES */
 
 const express = require('express');
+const verUser = require('../middleware/verUser');
 
 
 /* HOME ROUTES */
@@ -10,6 +11,10 @@ routerHome.use(express.json())
 
 routerHome.get('', (req, res) => {
     res.send('Hello world!')
+});
+
+routerHome.get('/user', verUser, (req, res) => {
+    res.send('User Logged')
 });
 
 /* EXPORT */
