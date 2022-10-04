@@ -1,7 +1,11 @@
 /* MODULES */
 
 const express = require('express');
-const { registerUser, loginUser } = require('../controllers/authController.js');
+const { body } = require('express-validator');
+const {
+  registerUser,
+  loginUser
+} = require('../controllers/authController.js');
 
 /* HOME ROUTES */
 
@@ -12,12 +16,20 @@ routerAuth.get('/register', (req, res) => {
   res.send('Register');
 });
 
-routerAuth.post('/register', registerUser);
+
+routerAuth.post(
+  '/register',
+  [
+    body('nickname', 'Insert a valid nickname').trim().notEmpty().escape(),
+    body('email', 'Insert a valid email').trim().isEmail().normalizeEmail(),
+  ], registerUser);
 
 routerAuth.get('/login', (req, res) => {
+  // Display login form
   res.send('Login');
 });
 
+// Receive credentials and login
 routerAuth.post('/login', loginUser);
 
 /* EXPORT */

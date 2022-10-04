@@ -1,22 +1,29 @@
 // * Models //
+const { validationResult } = require('express-validator');
 const User = require('../models/User');
 
 const registerUser = async (req, res) => {
-  let user = await User.findOne({ email: req.body.email });
-  if (user) {
-    return res.status(400).send({ error: 'User already exist' });
-  }
-
-  user = await User.findOne({ nickname: req.body.nickname });
-  if (user) {
-    return res.status(400).send({ error: 'User already exist' });
-  }
-
-  if ((await req.body.email) !== req.body.verEmail) {
-    return res.status(400).send({ error: "Emails don't match" });
+  const { nickname, email, verEmail } = req.body;
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.json(errors);
   }
 
   try {
+    let user = await User.findOne({ nickname: nickname });
+    if (user) {
+      return res.status(400).send({ error: 'User already exist' });
+    }
+    
+    user = await User.findOne({ email: email });
+    if (user) {
+      return res.status(400).send({ error: 'User already exist' });
+    }
+
+    if ((await email) !== verEmail) {
+      return res.status(400).send({ error: "Emails don't match" });
+    }
+
     let userInfo = req.body;
 
     let newUser = await new User({
@@ -48,7 +55,11 @@ const loginUser = async (req, res) => {
     //   return res.send({error: "Incorrect email"});
     // };
 
-    return res.send(JSON.stringify('successful login'));
+    // Crear sesion a travez de passport
+    req.login(user, (error) => {
+      if (error) throw new Error('Error to create session');
+      return res.send(JSON.stringify('successful login'));
+    });
   } catch (error) {
     res.json({ error: error.message });
   }

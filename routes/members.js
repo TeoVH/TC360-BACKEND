@@ -2,6 +2,7 @@
 
 const express = require('express');
 const { memberList } = require('../controllers/membersController');
+const verUser = require('../middleware/verUser');
 
 /* Midleware*/
 
@@ -11,7 +12,7 @@ routerMembers.use(express.json());
 
 /* Routes */
 
-routerMembers.get('/', memberList);
+routerMembers.get('/', verUser, memberList);
 
 
 /* Export */
