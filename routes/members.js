@@ -9,11 +9,9 @@ const verUser = require('../middleware/verUser');
 const routerMembers = express.Router();
 routerMembers.use(express.json());
 
-
 /* Routes */
 
-routerMembers.get('/', verUser, memberList);
-
+routerMembers.get('/', memberList);
 
 /* Export */
 

@@ -2,10 +2,7 @@
 
 const express = require('express');
 const { body } = require('express-validator');
-const {
-  registerUser,
-  loginUser
-} = require('../controllers/authController.js');
+const { registerUser, loginUser } = require('../controllers/authController.js');
 
 /* HOME ROUTES */
 
@@ -16,13 +13,14 @@ routerAuth.get('/register', (req, res) => {
   res.send('Register');
 });
 
-
 routerAuth.post(
   '/register',
   [
     body('nickname', 'Insert a valid nickname').trim().notEmpty().escape(),
-    body('email', 'Insert a valid email').trim().isEmail().normalizeEmail(),
-  ], registerUser);
+    body('email', 'Insert a valid email').trim().isEmail(),
+  ],
+  registerUser
+);
 
 routerAuth.get('/login', (req, res) => {
   // Display login form
