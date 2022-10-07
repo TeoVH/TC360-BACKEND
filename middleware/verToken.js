@@ -7,6 +7,6 @@ module.exports = (req, res, next) => {
     req.token = bearerToken;
     next();
   } else {
-    res.status(403).send({error: 'authorization error'});
+    res.status(403).send({ error: 'authorization error' });
   }
 };

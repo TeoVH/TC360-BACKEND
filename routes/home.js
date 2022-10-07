@@ -1,20 +1,19 @@
 /* MODULES */
 
 const express = require('express');
-const verUser = require('../middleware/verUser');
-
+const verToken = require('../middleware/verToken');
 
 /* HOME ROUTES */
 
 const routerHome = express.Router();
-routerHome.use(express.json())
+routerHome.use(express.json());
 
 routerHome.get('', (req, res) => {
-    res.send('Hello world!')
+  res.send('Hello world!');
 });
 
-routerHome.get('/user', verUser, (req, res) => {
-    res.send('User Logged')
+routerHome.get('/user', verToken, (req, res) => {
+  res.send('User Logged');
 });
 
 /* EXPORT */

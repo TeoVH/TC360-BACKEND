@@ -40,21 +40,14 @@ const loginUser = async (req, res) => {
   try {
     const user = await User.findOne({ email });
     if (!user) {
-      console.log("User doesn't exit");
       res.status(401);
       return res.send({ error: "User doesn't exit" });
     }
 
-    console.log(user);
     const token = jwt.sign(
-      { email: user.email, nickname: user.nickname },
+      { email: user.email, nickname: user.nickname, _id: user._id },
       'keyToken'
     );
-
-    // if (!await user.compareEmail(email)) {
-    //   console.log("Incorrect email");
-    //   return res.send({error: "Incorrect email"});
-    // };
 
     return res.send({
       token,
