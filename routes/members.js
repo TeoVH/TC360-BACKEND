@@ -12,6 +12,10 @@ routerMembers.use(express.json());
 /* Routes */
 
 routerMembers.get('/', memberList);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7a5e313ce8691a477f9321b081d1e0ddb94964b3
 
 /* Export */
 
