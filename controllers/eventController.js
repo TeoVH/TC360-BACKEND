@@ -23,7 +23,7 @@ const eventCreate = async (req, res) => {
             time,
             location 
         })
-        let newEvent = await event.save()
+        let createdEvent = await event.save()
         res.status(201).json({
             status : 'Sucess',
             data : {
