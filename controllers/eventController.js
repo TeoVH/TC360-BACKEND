@@ -37,7 +37,17 @@ const eventCreate = async (req, res) => {
     }
 }
 
+const eventDetail = async (req, res) => {
+    try {
+        let details = await Event.findOne(name = req.body.name)
+        res.json(details)
+    } catch {
+        console.log('error')
+    }
+}
+
 /* export*/
 module.exports = {
-    eventCreate
+    eventCreate,
+    eventDetail
 }

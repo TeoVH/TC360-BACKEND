@@ -49,6 +49,7 @@ app.use('/members', routerMembers);
 const routerEvent = require('./routes/event.js');
 const Event = require('./models/Event.js')
 app.use('/event', routerEvent);
+app.use('event', routerEvent);
 
 /* SERVER */
 
