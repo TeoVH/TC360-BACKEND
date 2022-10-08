@@ -13,8 +13,7 @@ const eventCreate = async (req, res) => {
         location
     } = req.body;
 
-    let decoded = jwt.verify(req.headers.authorization, 'keyToken');
-    console.log(decoded);
+    let decoded = jwt.verify(req.headers.Authorization, 'keyToken');
 
     try {
         let event = new Event({ 
