@@ -1,23 +1,26 @@
 /* Model*/
-const Event = require('../models/Event')
+const Event = require('../models/Event');
+const jwt = require('jsonwebtoken');
 
 /* Route */
 
 const eventCreate = async (req, res) => {
     let {name,
         description,
-        coordinator,
+        // coordinator,
         type,
         date,
         time,
         location
-    } = req.body
+    } = req.body;
+
+    let decoded = jwt.verify(req.headers.authorization, 'keyToken');
 
     try {
         let event = new Event({ 
             name,
             description,
-            coordinator,
+            coordinator: decoded.nickname,
             type,
             date,
             time,
