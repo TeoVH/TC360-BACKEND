@@ -7,7 +7,6 @@ const jwt = require('jsonwebtoken');
 const eventCreate = async (req, res) => {
     let {name,
         description,
-        // coordinator,
         type,
         date,
         time,
@@ -15,6 +14,7 @@ const eventCreate = async (req, res) => {
     } = req.body;
 
     let decoded = jwt.verify(req.headers.authorization, 'keyToken');
+    console.log(decoded);
 
     try {
         let event = new Event({ 
