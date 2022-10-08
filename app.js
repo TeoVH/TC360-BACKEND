@@ -46,6 +46,10 @@ const routerMembers = require('./routes/members.js');
 const User = require('./models/User.js');
 app.use('/members', routerMembers);
 
+const routerEvent = require('./routes/event.js');
+const Event = require('./models/Event.js')
+app.use('/event', routerEvent);
+
 /* SERVER */
 
 const PORT = process.env.PORT || 8080;
