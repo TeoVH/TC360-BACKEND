@@ -47,8 +47,18 @@ const eventDetail = async (req, res) => {
     }
 }
 
+const showAllEvents = async (req, res) => {
+    try {
+        let events = await Event.find({}).all()
+        res.json(events)
+    } catch (err) {
+        console.log(err)
+    }
+}
+
 /* export*/
 module.exports = {
     eventCreate,
-    eventDetail
+    eventDetail,
+    showAllEvents
 }
