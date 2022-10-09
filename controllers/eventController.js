@@ -38,11 +38,12 @@ const eventCreate = async (req, res) => {
 }
 
 const eventDetail = async (req, res) => {
+    const id = req.params._id;
     try {
-        let details = await Event.findOne(name = req.body.name)
+        let details = await Event.findOne({_id: id})
         res.json(details)
-    } catch {
-        console.log('error')
+    } catch (err) {
+        console.log(err)
     }
 }
 
