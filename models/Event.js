@@ -31,6 +31,9 @@ const eventSchema = new Schema({
         type : String,
         required : true,
     },
+    guests: {
+        type: Array
+    },
     user_id: {
         type : String,
         required : true,

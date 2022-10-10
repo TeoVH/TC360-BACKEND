@@ -39,6 +39,16 @@ const eventCreate = async (req, res) => {
     };
 };
 
+const editEvent = async (req, res) => {
+    Event.updateOne({ _id: req.params._id }, req.body)
+    .then(doc => {
+        if (!doc) {
+            return res.status(404).end();
+        }
+        return res.status(200).end();
+    })
+}
+
 const eventDetail = async (req, res) => {
     const id = req.params._id;
     try {
@@ -62,5 +72,6 @@ const showAllEvents = async (req, res) => {
 module.exports = {
     eventCreate,
     eventDetail,
-    showAllEvents
+    showAllEvents,
+    editEvent
 };
