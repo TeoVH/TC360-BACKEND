@@ -31,7 +31,11 @@ const eventSchema = new Schema({
         type : String,
         required : true,
     },
-})
+    user_id: {
+        type : String,
+        required : true,
+    }
+});
 
-const Event = mongoose.model('Event', eventSchema)
-module.exports = Event
+const Event = mongoose.model('Event', eventSchema);
+module.exports = Event;

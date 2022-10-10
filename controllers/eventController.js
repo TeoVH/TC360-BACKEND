@@ -1,6 +1,7 @@
 /* Model*/
 const Event = require('../models/Event');
 const jwt = require('jsonwebtoken');
+const { decode } = require('punycode');
 
 /* Route */
 
@@ -13,7 +14,7 @@ const eventCreate = async (req, res) => {
         location
     } = req.body;
 
-    let decoded = jwt.verify(req.headers.Authorization, 'keyToken');
+    let decoded = jwt.verify(req.get('Authorization'), 'keyToken');
 
     try {
         let event = new Event({ 
@@ -23,9 +24,10 @@ const eventCreate = async (req, res) => {
             type,
             date,
             time,
-            location 
-        })
-        let createdEvent = await event.save()
+            location,
+            user_id: decoded._id
+        });
+        let createdEvent = await event.save();
         res.status(201).json({
             status : 'Sucess',
             data : {
@@ -34,8 +36,8 @@ const eventCreate = async (req, res) => {
         })
     } catch(err) { 
         console.log(err)        
-    }
-}
+    };
+};
 
 const eventDetail = async (req, res) => {
     const id = req.params._id;
@@ -54,11 +56,11 @@ const showAllEvents = async (req, res) => {
     } catch (err) {
         console.log(err)
     }
-}
+};
 
 /* export*/
 module.exports = {
     eventCreate,
     eventDetail,
     showAllEvents
-}
+};
