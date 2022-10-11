@@ -60,8 +60,10 @@ const eventDetail = async (req, res) => {
 }
 
 const showAllEvents = async (req, res) => {
+    const decoded = jwt.verify(req.get('Authorization'), 'keyToken');
+
     try {
-        let events = await Event.find({}).all()
+        let events = await Event.find({"guests._id" : decoded._id}).all()
         res.json(events)
     } catch (err) {
         console.log(err)
