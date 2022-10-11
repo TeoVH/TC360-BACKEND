@@ -51,6 +51,10 @@ const Event = require('./models/Event.js')
 app.use('/event', routerEvent);
 app.use('event', routerEvent);
 
+const routeInvite = require('./routes/invite.js');
+const Invite = require('./models/Invite');
+app.use('/invite', routeInvite);
+
 /* SERVER */
 
 const PORT = process.env.PORT || 8080;
