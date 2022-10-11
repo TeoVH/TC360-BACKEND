@@ -1,7 +1,7 @@
 /* Model*/
 const Event = require('../models/Event');
 const jwt = require('jsonwebtoken');
-const { decode } = require('punycode');
+const Invite = require('../models/Invite')
 
 /* Route */
 
