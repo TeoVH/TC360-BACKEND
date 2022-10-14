@@ -4,7 +4,7 @@
  **/
 
 const express = require('express');
-const { myInvites, createInvite } = require('../controllers/inviteController');
+const { myInvites, inviteCreate } = require('../controllers/inviteController');
 
 /* Midleware */
 
@@ -14,10 +14,12 @@ routeInvite.use(express.json());
 /* Route */
 
 /* get all events that the user was invited */
-routeInvite.get('/invite', myInvites);
+routeInvite.get('/my-invites', myInvites);
+
+routeInvite.get('/invite', );
 
 /* create a new invitation */
-routeInvite.post('/create-invite', createInvite);
+routeInvite.post('/create-invite', inviteCreate);
 
 /* Exports */
 
