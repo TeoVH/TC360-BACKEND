@@ -5,6 +5,10 @@ const Invite = require('../models/Invite')
 
 /* Routes */
 
+const createInvite = async (req, res) => {
+    const decoded = jwt.verify(req.get('Authorization'), 'keyToken');
+}
+
 const myInvites = async (req, res) => {
     const decoded = jwt.verify(req.get('Authorization'), 'keyToken');
 
@@ -26,5 +30,6 @@ const inviteStatus = async (req ,res) => {
 }
 /* Export */
 module.exports = {
-    myInvites
+    myInvites,
+    createInvite
 }
