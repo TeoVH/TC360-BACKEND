@@ -4,7 +4,7 @@
  **/
 
 const express = require('express');
-const { myInvites, inviteCreate } = require('../controllers/inviteController');
+const { myInvites, inviteEvent } = require('../controllers/inviteController');
 
 /* Midleware */
 
@@ -19,7 +19,7 @@ routeInvite.get('/my-invites', myInvites);
 routeInvite.get('/invite', );
 
 /* create a new invitation */
-routeInvite.post('/create-invite', inviteCreate);
+routeInvite.post('/confirmation-invite', inviteEvent);
 
 /* Exports */
 

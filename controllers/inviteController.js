@@ -5,37 +5,27 @@ const Invite = require('../models/Invite')
 
 /* Routes */
 
-const inviteCreate = async (req, res) => {
+const inviteEvent = async (req, res) => {
     const decoded = jwt.verify(req.get('Authorization'), 'keyToken');
 
-    let { event_id, user_id, confirmation } = req.body;
+    let { event_id, confirmation } = req.body;
 
     try {
         let invite = new Invite({
             event_id,
-            user_id,
+            user_id : decoded.user_id,
             confirmation
         });
-        let createdInvite = await invite.save();
+        let datesInvite = await invite.save();
         res.status(201).json({
             status : 'Sucess',
             data : {
-                createdInvite
+                datesInvite
             }
         });
     } catch(err) { 
         console.log(err)        
     };
-}
-
-const confirmationStatus = async (req, res) => {
-    const decoded = jwt.verify(req.get('Authorization'), 'keyToken');
-
-    try {
-        let confirmation = await Invite.find({"user_id" : decoded.user_id});
-    } catch (err) {
-        console.log(err)
-    }
 }
 
 const myInvites = async (req, res) => {
@@ -49,16 +39,8 @@ const myInvites = async (req, res) => {
     }
 }
 
-const inviteStatus = async (req ,res) => {
-    const decoded = jwt.verify(req.get('Authorization'), 'keyToken');
-
-    try {
-    } catch (err) {
-        console.log(err)
-    }
-}
 /* Export */
 module.exports = {
     myInvites,
-    inviteCreate
+    inviteEvent
 }
