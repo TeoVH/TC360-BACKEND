@@ -49,6 +49,14 @@ const myInvites = async (req, res) => {
     }
 }
 
+const inviteStatus = async (req ,res) => {
+    const decoded = jwt.verify(req.get('Authorization'), 'keyToken');
+
+    try {
+    } catch (err) {
+        console.log(err)
+    }
+}
 /* Export */
 module.exports = {
     myInvites,
