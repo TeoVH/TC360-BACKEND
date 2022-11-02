@@ -1,4 +1,4 @@
-# tc360-backend
+# TC360-BACKEND
 
 ![npm](https://img.shields.io/npm/v/tc360-backend.svg) ![license](https://img.shields.io/npm/l/tc360-backend.svg) ![github-issues](https://img.shields.io/github/issues/TeoVH/TC360-BACKEND.svg)  ![Circle CI build status](https://circleci.com/gh/TeoVH/TC360-BACKEND.svg?style=svg)
 
@@ -16,7 +16,9 @@ Backend for tc360 app
 ![](https://david-dm.org/TeoVH/TC360-BACKEND/dev-status.svg)
 
 ## Features
-
+Register
+Login
+Create Events
 
 ## Install
 
@@ -54,6 +56,9 @@ Contributions welcome; Please submit all pull requests the against master branch
 ## Author
 
 Mateo Villada Higuita
+Felipe Rios
+Jerson Castro
+Leonardo Cumaco
 
 ## License
 
