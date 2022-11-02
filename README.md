@@ -2,8 +2,6 @@
 
 ![npm](https://img.shields.io/npm/v/tc360-backend.svg) ![license](https://img.shields.io/npm/l/tc360-backend.svg) ![github-issues](https://img.shields.io/github/issues/TeoVH/TC360-BACKEND.svg)  ![Circle CI build status](https://circleci.com/gh/TeoVH/TC360-BACKEND.svg?style=svg)
 
-Backend for tc360 app
-
 ![nodei.co](https://nodei.co/npm/tc360-backend.png?downloads=true&downloadRank=true&stars=true)
 
 ![travis-status](https://img.shields.io/travis/TeoVH/TC360-BACKEND.svg)
@@ -50,9 +48,10 @@ Package | Version | Dev
 [node-readme](https://www.npmjs.com/package/node-readme) | ^0.1.9 | ✔
 
 
-## Contributing
+## File architecture
+### Based in clean architecture
 
-Contributions welcome; Please submit all pull requests the against master branch. If your pull request contains JavaScript patches or features, you should include relevant unit tests. Please check the [Contributing Guidelines](contributng.md) for more details. Thanks!
+![image](https://user-images.githubusercontent.com/98775024/199554066-c18be39e-8faa-4a42-821d-94ee174fe0d9.png)
 
 ## Author
 
