@@ -17,9 +17,9 @@ Backend for tc360 app
 
 ## Features
 
-- **Register
-- **Login
-- **Create Events
+- **Register**
+- **Login**
+- **Create Events**
 
 ## Install
 
