@@ -25,8 +25,7 @@ Backend for tc360 app
 
 ## Scripts
 
- - **npm run test** : `echo "Error: no test specified" && exit 1`
- - **npm run start** : `node app.js`
+ - **npm run start** : `nodemon app.js`
  - **npm run lint** : `eslint`
  - **npm run readme** : `node ./node_modules/.bin/node-readme`
 
