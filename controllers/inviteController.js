@@ -28,6 +28,7 @@ const inviteEvent = async (req, res) => {
     };
 }
 
+/* get all events that the user was invited */
 const myInvites = async (req, res) => {
     const decoded = jwt.verify(req.get('Authorization'), 'keyToken');
 

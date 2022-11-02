@@ -39,6 +39,7 @@ const eventCreate = async (req, res) => {
     };
 };
 
+/* Modify an event specific */
 const editEvent = async (req, res) => {
     Event.updateOne({ _id: req.params._id }, req.body)
     .then(doc => {
@@ -49,6 +50,7 @@ const editEvent = async (req, res) => {
     })
 }
 
+/* Get a specific event */
 const eventDetail = async (req, res) => {
     const id = req.params._id;
     try {
@@ -59,6 +61,7 @@ const eventDetail = async (req, res) => {
     }
 }
 
+/* Get all events that the user create */
 const showAllEvents = async (req, res) => {
     const decoded = jwt.verify(req.get('Authorization'), 'keyToken');
 
@@ -70,7 +73,7 @@ const showAllEvents = async (req, res) => {
     }
 };
 
-/* export*/
+/* export */
 module.exports = {
     eventCreate,
     eventDetail,

@@ -2,6 +2,8 @@
 const User = require('../models/User');
 const jwt = require('jsonwebtoken');
 
+/* Checking the user input to detect if it does the data already exist 
+   or not and if match between both the data */
 const registerUser = async (req, res) => {
   let user = await User.findOne({ email: req.body.email });
   if (user) {
@@ -16,7 +18,8 @@ const registerUser = async (req, res) => {
   if ((await req.body.email) !== req.body.verEmail) {
     return res.status(400).send({ error: "Emails don't match" });
   }
-
+  
+  /* Creation of the user if it doesn't exist */
   try {
     let userInfo = req.body;
 
@@ -35,6 +38,7 @@ const registerUser = async (req, res) => {
   }
 };
 
+/* Login of the user after of the creation */
 const loginUser = async (req, res) => {
   const { email } = req.body;
   try {
@@ -44,6 +48,7 @@ const loginUser = async (req, res) => {
       return res.send({ error: "User doesn't exit" });
     }
 
+    /* Give the data to payload */
     const token = jwt.sign(
       { email: user.email, nickname: user.nickname, _id: user._id },
       'keyToken'
@@ -58,6 +63,7 @@ const loginUser = async (req, res) => {
   }
 };
 
+/* EXPORTS */
 module.exports = {
   registerUser,
   loginUser,

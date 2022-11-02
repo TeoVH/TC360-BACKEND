@@ -39,18 +39,22 @@ app.use(bodyParser.json());
 const routerHome = require('./routes/home.js');
 app.use('/', routerHome);
 
+/* authentication */
 const routerAuth = require('./routes/auth.js');
 app.use('/auth', routerAuth);
 
+/* Member Directory */
 const routerMembers = require('./routes/members.js');
 const User = require('./models/User.js');
 app.use('/members', routerMembers);
 
+/* Events creation and Handling */
 const routerEvent = require('./routes/event.js');
 const Event = require('./models/Event.js')
 app.use('/event', routerEvent);
 app.use('event', routerEvent);
 
+/* Creation list of invites to an event specific */
 const routeInvite = require('./routes/invite.js');
 const Invite = require('./models/Invite');
 app.use('/invite', routeInvite);

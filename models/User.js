@@ -1,6 +1,8 @@
+/* MODULES */
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
+/* SCHEMA */
 const userSchema = new Schema({
   nickname: {
     type: String,
@@ -12,23 +14,8 @@ const userSchema = new Schema({
     unique: true,
     required: true,
   },
-  // tokenConfirm: {
-  //     type: String,
-  //     default: null
-  // },
-  // confirmedAccount: {
-  //     type: Boolean,
-  //     default: false
-  // }
 });
 
-// userSchema.methods.compareEmail = async function(userEmail){
-//     if (userEmail !== this.email) {
-//         return false;
-//     }
-
-//     return true;
-// }
-
+/* EXPORTS */
 const User = mongoose.model('User', userSchema);
 module.exports = User;

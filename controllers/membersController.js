@@ -2,8 +2,7 @@
 
 const User = require('../models/User');
 
-/* Route */
-
+/* Alphabetical sort */
 const memberList = async (req, res) => {
   try {
     let alph = req.body.nickname;

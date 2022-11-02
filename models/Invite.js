@@ -3,8 +3,7 @@
 const mongoose = require('mongoose')
 const { Schema } = mongoose
 
-/* Schema */
-
+/* SCHEMA */
 const inviteSchema = new Schema ({
     user_id : {
         type : String,
@@ -21,6 +20,5 @@ const inviteSchema = new Schema ({
 })
 
 /* Exports */
-
 const Invite = mongoose.model('Invite', inviteSchema)
 module.exports = Invite

@@ -1,3 +1,5 @@
+/* Schema general to events, only the name of event don't repeat */
+
 const mongoose = require('mongoose')
 const { Schema } = mongoose
 
@@ -40,5 +42,6 @@ const eventSchema = new Schema({
     }
 });
 
+/* EXPORTS */
 const Event = mongoose.model('Event', eventSchema);
 module.exports = Event;

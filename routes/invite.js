@@ -16,7 +16,7 @@ routeInvite.use(express.json());
 /* get all events that the user was invited */
 routeInvite.get('/my-invites', myInvites);
 
-routeInvite.get('/invite', );
+/* routeInvite.get('/invite', );*/
 
 /* create a new invitation */
 routeInvite.post('/confirmation-invite', inviteEvent);
