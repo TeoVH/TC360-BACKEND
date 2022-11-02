@@ -56,10 +56,10 @@ Package | Version | Dev
 
 ## Author
 
-- **Mateo Villada Higuita
-- **Felipe Rios
-- **Jerson Castro
-- **Leonardo Cumaco
+- **Mateo Villada Higuita**
+- **Felipe Rios**
+- **Jerson Castro**
+- **Leonardo Cumaco**
 
 ## License
 
