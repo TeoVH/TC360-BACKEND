@@ -1,90 +1,61 @@
-﻿# TC360-BACKEND
+# tc360-backend
 
-## INTRODUCTION
+![npm](https://img.shields.io/npm/v/tc360-backend.svg) ![license](https://img.shields.io/npm/l/tc360-backend.svg) ![github-issues](https://img.shields.io/github/issues/TeoVH/TC360-BACKEND.svg)  ![Circle CI build status](https://circleci.com/gh/TeoVH/TC360-BACKEND.svg?style=svg)
 
-##### COHORT 17
+Backend for tc360 app
 
-Hello reader, this proyect was create for students of Fundations of sofware, of Holberton School.
-This proyect is a demostraition of all learning in this school and are integrate between MDE and BOG.
+![nodei.co](https://nodei.co/npm/tc360-backend.png?downloads=true&downloadRank=true&stars=true)
 
-[Here you get the code of the Frontend]: https://github.com/Zapata9664/TC360-FRONTEND
-[Here you get the code of the Backend]: https://github.com/TeoVH/TC360-BACKEND
+![travis-status](https://img.shields.io/travis/TeoVH/TC360-BACKEND.svg)
+![stars](https://img.shields.io/github/stars/TeoVH/TC360-BACKEND.svg)
+![forks](https://img.shields.io/github/forks/TeoVH/TC360-BACKEND.svg)
 
-This proyect was have a duration of one month and we present the advanced and splain of the code in the next sections, how a introduction we job in the idea of Scott Holis (CEO of veloziant) of create a Web Page for create events of tennis with the goal of create a comunity of players.
+![forks](https://img.shields.io/github/forks/TeoVH/TC360-BACKEND.svg)
 
-###### Project Distribution
+![](https://david-dm.org/TeoVH/TC360-BACKEND/status.svg)
+![](https://david-dm.org/TeoVH/TC360-BACKEND/dev-status.svg)
 
-MDE
+## Features
 
-- Website
-- Member Directory
 
-BOG
+## Install
 
-- Event Management – view, create, manage
+`npm install --save tc360-backend`
 
-# SUMMARY
 
-## Getting Started with Create React App and Redux
+## Scripts
 
-This project was bootstrapped with Create React App, using the Redux and Redux Toolkit template.
+ - **npm run test** : `echo "Error: no test specified" && exit 1`
+ - **npm run start** : `node app.js`
+ - **npm run lint** : `eslint`
+ - **npm run readme** : `node ./node_modules/.bin/node-readme`
 
-### Available Programs for run the Frontend
+## Dependencies
 
-- NODE.JS
+Package | Version | Dev
+--- |:---:|:---:
+[body-parser](https://www.npmjs.com/package/body-parser) | ^1.20.0 | ✖
+[connect-flash](https://www.npmjs.com/package/connect-flash) | ^0.1.1 | ✖
+[cors](https://www.npmjs.com/package/cors) | ^2.8.5 | ✖
+[dotenv](https://www.npmjs.com/package/dotenv) | ^16.0.2 | ✖
+[express](https://www.npmjs.com/package/express) | ^4.18.1 | ✖
+[express-session](https://www.npmjs.com/package/express-session) | ^1.17.3 | ✖
+[express-validator](https://www.npmjs.com/package/express-validator) | ^6.14.2 | ✖
+[jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken) | ^8.5.1 | ✖
+[mongoose](https://www.npmjs.com/package/mongoose) | ^6.6.2 | ✖
+[nanoid](https://www.npmjs.com/package/nanoid) | ^4.0.0 | ✖
+[passport](https://www.npmjs.com/package/passport) | ^0.6.0 | ✖
+[node-readme](https://www.npmjs.com/package/node-readme) | ^0.1.9 | ✔
 
-To get this version, you can use the apt package manager. Refresh your local package index first by typing:
 
-`sudo apt update`
+## Contributing
 
-Then install Node.js:
+Contributions welcome; Please submit all pull requests the against master branch. If your pull request contains JavaScript patches or features, you should include relevant unit tests. Please check the [Contributing Guidelines](contributng.md) for more details. Thanks!
 
-`sudo apt install nodejs`
+## Author
 
-Check that the install was successful by querying node for its version number:
+Mateo Villada Higuita
 
-`node -v`
+## License
 
-`Output
-v10.19.0`
-
-If the package in the repositories suits your needs, this is all you need to do to get set up with Node.js. In most cases, you’ll also want to also install npm, the Node.js package manager. You can do this by installing the npm package with apt:
-
-`sudo apt install npm`
-
-###  Available Scripts for use the Frontend
-
-In the project directory, you can run:
-
-#### `npm start`
-
-Runs the app in the development mode.
-Open http://localhost:3000 to view it in your browser.
-
-The page will reload when you make changes.
-You may also see any lint errors in the console.
-
-#### `npm test`
-
-Launches the test runner in the interactive watch mode.
-See the section about running tests for more information.
-
-#### `npm run build`
-
-Builds the app for production to the build folder.
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.
-Your app is ready to be deployed!
-
-See the section about deployment for more information.
-
-#### `npm run eject`
-
-Note: this is a one-way operation. Once you eject, you can't go back!
-
-If you aren't satisfied with the build tool and configuration choices, you can eject at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except eject will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use eject. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+ - **ISC** : http://opensource.org/licenses/ISC
