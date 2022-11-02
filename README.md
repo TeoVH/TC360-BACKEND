@@ -32,20 +32,20 @@ Backend for tc360 app
 
 ## Dependencies
 
-Package | Version | Dev
+Package | Version | 
 --- |:---:|:---:
-[body-parser](https://www.npmjs.com/package/body-parser) | ^1.20.0 | ✖
-[connect-flash](https://www.npmjs.com/package/connect-flash) | ^0.1.1 | ✖
-[cors](https://www.npmjs.com/package/cors) | ^2.8.5 | ✖
-[dotenv](https://www.npmjs.com/package/dotenv) | ^16.0.2 | ✖
-[express](https://www.npmjs.com/package/express) | ^4.18.1 | ✖
-[express-session](https://www.npmjs.com/package/express-session) | ^1.17.3 | ✖
-[express-validator](https://www.npmjs.com/package/express-validator) | ^6.14.2 | ✖
-[jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken) | ^8.5.1 | ✖
-[mongoose](https://www.npmjs.com/package/mongoose) | ^6.6.2 | ✖
-[nanoid](https://www.npmjs.com/package/nanoid) | ^4.0.0 | ✖
-[passport](https://www.npmjs.com/package/passport) | ^0.6.0 | ✖
-[node-readme](https://www.npmjs.com/package/node-readme) | ^0.1.9 | ✔
+[body-parser](https://www.npmjs.com/package/body-parser) | ^1.20.0 | 
+[connect-flash](https://www.npmjs.com/package/connect-flash) | ^0.1.1 | 
+[cors](https://www.npmjs.com/package/cors) | ^2.8.5 | 
+[dotenv](https://www.npmjs.com/package/dotenv) | ^16.0.2 | 
+[express](https://www.npmjs.com/package/express) | ^4.18.1 | 
+[express-session](https://www.npmjs.com/package/express-session) | ^1.17.3 | 
+[express-validator](https://www.npmjs.com/package/express-validator) | ^6.14.2 | 
+[jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken) | ^8.5.1 | 
+[mongoose](https://www.npmjs.com/package/mongoose) | ^6.6.2 | 
+[nanoid](https://www.npmjs.com/package/nanoid) | ^4.0.0 | 
+[passport](https://www.npmjs.com/package/passport) | ^0.6.0 | 
+[node-readme](https://www.npmjs.com/package/node-readme) | ^0.1.9 | 
 
 
 ## Contributing
