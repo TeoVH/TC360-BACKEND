@@ -16,9 +16,10 @@ Backend for tc360 app
 ![](https://david-dm.org/TeoVH/TC360-BACKEND/dev-status.svg)
 
 ## Features
-Register
-Login
-Create Events
+
+- **Register
+- **Login
+- **Create Events
 
 ## Install
 
@@ -55,10 +56,10 @@ Contributions welcome; Please submit all pull requests the against master branch
 
 ## Author
 
-Mateo Villada Higuita
-Felipe Rios
-Jerson Castro
-Leonardo Cumaco
+- **Mateo Villada Higuita
+- **Felipe Rios
+- **Jerson Castro
+- **Leonardo Cumaco
 
 ## License
 
