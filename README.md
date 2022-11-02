@@ -51,7 +51,8 @@ Package | Version | Dev
 ## File architecture
 ### Based in clean architecture
 
-![image](https://user-images.githubusercontent.com/98775024/199554066-c18be39e-8faa-4a42-821d-94ee174fe0d9.png)
+![image](https://user-images.githubusercontent.com/98775024/199554309-b6c5da4b-40b9-4364-8826-6b770e6d9443.png)
+
 
 ## Author
 
