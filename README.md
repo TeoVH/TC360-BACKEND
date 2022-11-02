@@ -1,6 +1,6 @@
 # TC360-BACKEND
 
-![npm](https://img.shields.io/npm/v/tc360-backend.svg) ![license](https://img.shields.io/npm/l/tc360-backend.svg) ![github-issues](https://img.shields.io/github/issues/TeoVH/TC360-BACKEND.svg)  ![Circle CI build status](https://circleci.com/gh/TeoVH/TC360-BACKEND.svg?style=svg)
+![npm](https://img.shields.io/npm/v/tc360-backend.svg) ![license](https://img.shields.io/npm/l/tc360-backend.svg) ![github-issues](https://img.shields.io/github/issues/TeoVH/TC360-BACKEND.svg)
 
 ![nodei.co](https://nodei.co/npm/tc360-backend.png?downloads=true&downloadRank=true&stars=true)
 
