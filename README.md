@@ -58,6 +58,7 @@ Package | Version | Dev
 
 - **Mateo Villada Higuita**
 - **Felipe Rios**
+- **Jerson Castro**
 
 ## License
 
